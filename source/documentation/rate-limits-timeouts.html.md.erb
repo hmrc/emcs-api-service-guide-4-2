@@ -1,0 +1,15 @@
+---
+title: Rate limits and timeouts
+weight: 100
+---
+
+# Rate limits and timeouts
+<%= partial 'documentation/partials/google_tag_manager_js' %>
+We limit the number of requests each application can make. This protects our service against excessive use and Denial-of-Service attacks, and also encourages you to use our APIs efficiently.
+
+We set limits based on anticipated loads and peaks. Our standard limit is 3 requests per second per application.
+
+If you reach this limit you’ll get a response with an HTTP status of ```429``` (Too Many Requests). If a 429 response is received we recommend that your code should stop making additional API requests for a short period of time before retrying.
+
+You can read more about rate limiting on the [developer hub](https://developer.service.hmrc.gov.uk/api-documentation/docs/reference-guide#rate-limiting)
+

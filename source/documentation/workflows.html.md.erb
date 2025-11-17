@@ -1,0 +1,43 @@
+---
+title: Workflows
+weight: 15
+---
+
+# Workflows
+<%= partial 'documentation/partials/google_tag_manager_js' %>
+
+This page describes the typical workflow and high level process flow for the production API.
+
+Information on the test process can be found in the [EMCS API testing guide](/guides/emcs-api-testing-guide/).
+
+## Typical workflow
+
+
+1. The consignor [submits a draft movement](submit-draft-movement.html) (IE815) message,  and will asynchronously receive a validated e-AD (IE801) message in return to notify them that their draft movement has been accepted.
+
+2. The consignor or consignee can call the [get excise movements endpoint](get-excise-movements.html) or [the get single excise movement endpoint](get-excise-movement.html) to retrieve the status of the excise movement.
+
+3. Using the ‘updatedSince’ query parameter with the [get excise movements endpoint](get-excise-movements.html), consignors or consignees can filter excise movements modified after the last time they polled for messages.
+
+4. For each updated movement that gets returned, they can then call the [get all messages for an excise movement endpoint](get-all-messages.html) and pass in the same value for its "updatedSince" query parameter to get the messages that have been received since they last polled. This service guide contains a [list of all messages it is possible to receive](get-all-messages.html#messages).
+
+5. The consignor or consignee can use the [submit a message for an excise movement endpoint](submit-message.html) to update the movement with the following messages:
+ * IE810 - Cancellation	
+ * IE813 - Change of destination
+ * IE818 - Report of receipt
+ * IE819 - Alert or rejection of E-AD/E-SAD
+ * IE837 - Explain delay to delivery
+ * IE871 - Reason for shortage
+6. Once the IE818 - Report of receipt has been submitted and accepted, the movement is complete.
+
+
+## High level process flow diagram
+
+<a href="../images/emcs-api-high-level-process-map.png" target="_blank"><img src="../images/emcs-api-high-level-process-map.png" alt="A high level process map for EMCS API"></a>
+<a href="../images/emcs-api-high-level-process-map.png" target="_blank">Open high level process map in a new tab.</a>
+
+Detailed process flow diagrams for the new RESTful API are still in development.
+
+As the functionality of the API remains similar to the SOAP API, you should use the [process flows in the existing DDNEA documentation](https://www.gov.uk/government/publications/emcs-functional-stage-31-fs31-technical-specifications). 
+
+Ignore any references to SOAP or SOAP envelopes, the new API is RESTful.

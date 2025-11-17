@@ -1,0 +1,46 @@
+---
+title: Get trader information
+weight: 70
+---
+
+# Get trader information
+<%= partial 'documentation/partials/google_tag_manager_js' %>
+Use the POST endpoint [Get information relating to an excise trader](/api-documentation/docs/api/service/excise-movement-control-system-api/1.0/oas/page#tag/Traders/operation/prevalidateTrader) to get information about an excise trader.
+
+## Request body schema
+
+Full details of the request body schema can be found in the [API reference](/api-documentation/docs/api/service/excise-movement-control-system-api/1.0/oas/page#tag/Movements/operation/prevalidateTrader).
+
+The request body must include the excise reference number (ERN), entity group and authorisation request.
+
+### Entity groups
+
+The following entity groups are available:
+
+- UK Record
+- EU Trader
+- EU Warehouse
+- EU Temporary Authorisation
+
+## Responses 
+
+Full details of successful and unsuccessful responses and their schema can be found in the [API reference](/api-documentation/docs/api/service/excise-movement-control-system-api/1.0/oas/page#tag/Movements/operation/prevalidateTrader) on the HMRC Developer Hub.
+
+| Response code | Status | Details | Contents | 
+| -- | -- | -- | -- |
+| 200 | Successful | Validation performed successfully | validation timestamp, ERN, entity group, valid trader, trader type, validate product authorisation response |
+| 200 | Successful | Validation performed with a business error (invalid trader, invalid product codes) | validation timestamp, ERN, entity group, valid trader, error code, error text, trader type, validate product authorisation response |
+| 400 | Unsuccesful| Invalid JSON or mandatory fields missing | DateTime, message, debug message |
+| 500 | Unsuccessful | Internal server error | DateTime, message, debug message |
+
+### Trader types
+
+The following trader types are available:
+
+1. Warehouse Keeper
+2. Tax Warehouse
+3. Registered Consignor
+4. Registered Consignee
+5. Temporary Registered Consignee
+6. Temporary Registered Authorisation
+7. Other

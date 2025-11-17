@@ -1,0 +1,36 @@
+---
+title: Unsubscribe an ERN from push/pull notifications
+weight: 50
+---
+
+# Unsubscribe an ERN from push/pull notifications
+<%= partial 'documentation/partials/google_tag_manager_js' %>
+This endpoint allows you to unsubscribe an ERN to no longer receive push/pull notifications (PPN).
+
+Use the POST endpoint [Unsubscribe an ERN to no longer receive Push/Pull notifications](/api-documentation/docs/api/service/excise-movement-control-system-api/1.0/oas/page#tag/Subscribe/operation/unsubscribeErn) to unsubscribe an ERN to no longer receive Push/Pull notifications.
+
+## Requirements
+
+The user associated with the provided bearer token must have an enrolment that matches the ERN. If no matching enrolment is found, a 403 Forbidden error will be returned.
+
+## Path parameters
+
+| Parameter | Type | Details |
+| -- | -- | -- |
+| ern | String | The ERN to be unsubscribed from PPN |
+
+## Responses
+
+Full details of successful and unsuccessful responses and their schema can be found in the [API reference](/api-documentation/docs/api/service/excise-movement-control-system-api/1.0/oas/page#tag/Subscribe/operation/unsubscribeErn) on the HMRC Developer Hub.
+
+| Response code | Status | Details | Contents |
+| -- | -- | -- | -- | -- |
+| 202 | Successful | ERN accepted | Empty response |
+| 400 | Unsuccessful | Invalid JSON or mandatory fields missing | DateTime, message, debug message|
+| 401 | Unsuccessful | Consignor or consignee not authorised. Invalid enrolment parameter. | DateTime, message, debug message |
+| 403 | Unsuccessful | Consignor ID or consignee ID in submitted message is not in authorisation bearer token. | DateTime, message, debug message |
+| 403 | Unsuccessful | Logged in ERN cannot send this message | DateTime, message, debug message |
+| 500 | Unsuccessful | Internal server error. | DateTime, EMCS Correlation ID, message, debug message |
+| 503 | Unsuccessful | Downstream service is unavailable. | DateTime, EMCS Correlation ID, message, debug message |
+
+

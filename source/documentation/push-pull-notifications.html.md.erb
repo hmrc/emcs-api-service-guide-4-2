@@ -1,0 +1,22 @@
+---
+title: Push pull notifications
+weight: 75
+---
+
+# Push pull notifications
+<%= partial 'documentation/partials/google_tag_manager_js' %>
+Our automated service can send you notifications about new messages from the EMCS. This functionality will send you a notification each time there is a new message for you to read.
+
+This means that your:
+
+- software will not have to poll for updated information
+- requests are unlikely to be rate limited because they’ll not be as frequent
+- network usage will also go down because you’ll not need to poll
+
+Notification content:
+
+- push notifications will not include the message but a field called messageUri
+- this will contain the relative path to the full XML message
+- use the messageUri to download the XML message from the EMCS API
+
+For information on how to configure and test this functionality, read the [EMCS API testing guide](/guides/emcs-api-testing-guide/).
