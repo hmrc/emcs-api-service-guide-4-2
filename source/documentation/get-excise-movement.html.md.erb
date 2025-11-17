@@ -1,0 +1,31 @@
+---
+title: Get single excise movement
+weight: 40
+---
+
+# Get single excise movement
+<%= partial 'documentation/partials/google_tag_manager_js' %>
+This endpoint allows you to retrieve information about a given movement.
+
+Use the GET endpoint [Get excise movement](/api-documentation/docs/api/service/excise-movement-control-system-api/1.0/oas/page#tag/Movements/operation/getMovement) to retrieve the status of an existing excise movement.
+
+## Requirements 
+
+You will only be able to retrieve movements where the consignor ID or consignee ID of the movement matches any of your excise reference numbers (ERNs) in the bearer token that you use for API authentication.
+
+## Path parameters
+
+| Parameter | Type | Details |
+| -- | -- | -- |
+| movementId | String | The movement ID of the movement |
+
+## Responses 
+
+Full details of successful and unsuccessful responses and their schema can be found in the [API reference](/api-documentation/docs/api/service/excise-movement-control-system-api/1.0/oas/page#tag/Movements/operation/getMovement) on the HMRC Developer Hub.
+
+| Response code | Status | Details | Contents | 
+| -- | -- | -- | -- |
+| 200 | Successful | Successful operation. | Movement ID, consignor ID, local reference number, consignee ID, administrative reference code, last updated |
+| 401 | Unsuccessful | Consignor or Consignee not authorised. Invalid enrolment parameter.| DateTime, message, debug message |
+| 403 | Unsuccessful | ERN is not in authorisation bearer token. | DateTime, message, debug message |
+| 404 | Unsuccessful | Movement with supplied ID not found for this ERN | DateTime, message, debug message |
