@@ -1,6 +1,6 @@
 import sbt.Keys._
 
-val appName = "emcs-api-service-guide"
+val appName = "emcs-api-service-guide-4-2"
 
 ThisBuild / scalaVersion := "2.13.12"
 

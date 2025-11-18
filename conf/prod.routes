@@ -1,4 +1,4 @@
 ->      /                                                  health.Routes
-GET     /guides/emcs-api-service-guide           controllers.Default.redirect(to = "/guides/emcs-api-service-guide/")
-GET     /guides/emcs-api-service-guide/          controllers.Assets.at(path="/public", file="index.html")
-GET     /guides/emcs-api-service-guide/*file     controllers.Assets.at(path="/public", file)
+GET     /guides/emcs-api-service-guide-4-2           controllers.Default.redirect(to = "/guides/emcs-api-service-guide-4-2/")
+GET     /guides/emcs-api-service-guide-4-2/          controllers.Assets.at(path="/public", file="index.html")
+GET     /guides/emcs-api-service-guide-4-2/*file     controllers.Assets.at(path="/public", file)
