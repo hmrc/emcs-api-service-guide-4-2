@@ -2,7 +2,7 @@
 service_name: Excise Movement Control System API
 
 # The route that will be used to access this site (with tailing slash)
-service_link: /guides/emcs-api-service-guide/
+service_link: /guides/emcs-api-service-guide-4-2/
 
 
 # ================================================
