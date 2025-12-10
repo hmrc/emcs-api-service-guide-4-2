@@ -7,11 +7,11 @@ weight: 30
 
 Consignors must submit a new draft excise movement before a movement of excise goods can take place. This is also called a ‘submit draft movement’ (IE815) message, or a 'draft e-AD'.
 
-Use the POST endpoint [Submit a new draft excise movement](/api-documentation/docs/api/service/excise-movement-control-system-api/1.0/oas/page#tag/Movements/operation/submitMovement) to create a new excise movement. 
+Use the POST endpoint [Submit a new draft excise movement](/api-documentation/docs/api/service/excise-movement-control-system-api/1.0/oas/page#tag/Movements/operation/submitMovement) to create a new excise movement.
 
 ## Message structures
 
-Full details of the message structure can be found in the [technical interface specification](/guides/excise-movement-control-system-api-tis/documentation/messagetypes.html).
+Full details of the message structure can be found in the [technical interface specification](/guides/excise-movement-control-system-api-tis-4-2/documentation/messagetypes.html).
 
 ## Request body schema
 
@@ -25,7 +25,7 @@ The consignor ID must match an excise reference number (ERN) in the bearer token
 
 Full details of successful and unsuccessful responses and their schema can be found in the [API reference](/api-documentation/docs/api/service/excise-movement-control-system-api/1.0/oas/page#tag/Movements/operation/submitMovement) on the HMRC Developer Hub.
 <%= partial 'documentation/partials/google_tag_manager_js' %>
-| Response code | Status | Details | Contents | 
+| Response code | Status | Details | Contents |
 | -- | -- | -- | -- |
 | 202 | Successful | Accepted | Movement Id, Box ID, consignor ID, local reference number, consignee ID|
 | 400 | Unsuccessful | The submission of draft movement message has failed validation | DateTime, EMCS correlation ID, message, debug message |
@@ -41,7 +41,7 @@ Full details of successful and unsuccessful responses and their schema can be fo
 
 A [list of potential IE815 error codes](error-codes.html#ie815-submit-draft-movement) is available in this service guide.
 
-[A workbook with more detailed information on error codes](/guides/excise-movement-control-system-api-tis/documentation/validation-rules.html) is available in the technical interface specification. The workbook includes validation rules and old error messages.
+[A workbook with more detailed information on error codes](/guides/excise-movement-control-system-api-tis-4-2/documentation/validation-rules.html) is available in the technical interface specification. The workbook includes validation rules and old error messages.
 
 ## Validation and administrative reference code (ARC)
 

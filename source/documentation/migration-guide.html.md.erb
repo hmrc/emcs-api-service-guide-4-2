@@ -15,7 +15,7 @@ The XML for the IE messages remains the same as the SOAP API. The SOAP API wrapp
 
 You can find the [request schema on GitHub](https://github.com/hmrc/excise-movement-control-system-api/tree/main/app/xsd).
 
-There is no longer an individual endpoint for every message you need to send. Many different messages can now be sent to a single endpoint, ['Submit a message for an excise movement'](/guides/emcs-api-service-guide/documentation/submit-message.html).
+There is no longer an individual endpoint for every message you need to send. Many different messages can now be sent to a single endpoint, ['Submit a message for an excise movement'](/guides/emcs-api-service-guide-4-2/documentation/submit-message.html).
 
 ## Equivalent SOAP API endpoints
 <%= partial 'documentation/partials/google_tag_manager_js' %>
@@ -23,8 +23,8 @@ There some changes to the API endpoints in the new RESTful API. You can find the
 
 ### Movements
 
-| RESTful API                            | SOAP API equivalents                | 
-| -----------                            | -----------                         | 
+| RESTful API                            | SOAP API equivalents                |
+| -----------                            | -----------                         |
 | [POST /customs/excise/movements](https://developer.qa.tax.service.gov.uk/api-documentation/docs/api/service/excise-movement-control-system-api/1.0/oas/page#tag/Movements/operation/submitMovement)         | SubmitDraftMovement                 |
 | [GET  /customs/excise/movements](https://developer.qa.tax.service.gov.uk/api-documentation/docs/api/service/excise-movement-control-system-api/1.0/oas/page#tag/Movements/operation/getAllMovements) <br> [GET  /customs/excise/movements/{movementId}](https://developer.qa.tax.service.gov.uk/api-documentation/docs/api/service/excise-movement-control-system-api/1.0/oas/page#tag/Movements/operation/getMovement)         | GetMovementForTrader                |
 | [POST /customs/excise/movements/{movementId}/messages](https://developer.qa.tax.service.gov.uk/api-documentation/docs/api/service/excise-movement-control-system-api/1.0/oas/page#tag/Movements/operation/submitMovement)  | SubmitReportofReceipt <br> SubmitExplainDelayToDelivery <br> SubmitCancellation <br> SubmitChangeOfDestination <br> SubmitAlertOrRejectionMovement <br> SubmitSplitMovement <br> SubmitReasonForShortage                     |                         |
