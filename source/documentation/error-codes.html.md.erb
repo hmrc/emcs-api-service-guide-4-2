@@ -6,9 +6,9 @@ weight: 103
 # Error codes
 <%= partial 'documentation/partials/google_tag_manager_js' %>
 
-This page can be used as a quick reference guide. 
+This page can be used as a quick reference guide.
 
-[A workbook with more detailed information on error codes](/guides/excise-movement-control-system-api-tis/documentation/validation-rules.html) is available in the technical interface specification. The workbook includes validation rules and old error messages.
+[A workbook with more detailed information on error codes](/guides/excise-movement-control-system-api-tis-4-2/documentation/validation-rules.html) is available in the technical interface specification. The workbook includes validation rules and old error messages.
 
 Error codes are available for the following messages:
 
@@ -31,7 +31,7 @@ Error codes are available for the following messages:
 
 | Error Code | Sub-Code | Message | Rule Name |
 | ---- | ---------- | -------- | ------- |
-| 12   | a | The transport arranger trader information is not required if they are the consignee or the consignor. Please amend your entry and resubmit. | NewTransportArrangerTrader | 
+| 12   | a | The transport arranger trader information is not required if they are the consignee or the consignor. Please amend your entry and resubmit. | NewTransportArrangerTrader |
 | 12   | b | The delivery place customs office is not required for an export. Please amend your entry and resubmit. | DeliveryPlaceCustomsOffice |
 | 13   | a | The transport arranger trader information is required if they are not the consignee or the consignor. Please amend your entry and resubmit. | ChangeOfDestination |
 | 13   | b |  The place of delivery information must be present where the destination is a Tax Warehouse, Direct Delivery, Certified consignee or Temporary certified consignee. Please amend your entry and resubmit. | DestinationChanged |
@@ -96,168 +96,168 @@ Error codes are available for the following messages:
 
 | Error Code | Sub-Code | Message | Rule Name |
 | ---- | ---------- | -------- | ------- |
-| 	12	 | 	a	 | 	The consignee trader information must not be present where the destination is unknown. Please amend your entry and resubmit.	 | 	ConsigneeTrader	 | 
-| 	12	 | 	b	 | 	The place of dispatch trader information must not be present where the origin type code is 'Import'. Please amend your entry and resubmit.	 | 	PlaceOfDispatchTrader	 | 
-| 	12	 | 	c	 | 	The dispatch import office must not be present where the origin type code is 'Tax Warehouse' or 'Duty Paid'. Please amend your entry and resubmit.	 | 	DispatchImportOffice	 | 
-| 	12	 | 	d	 | 	The complement consignee trader information must be present if the destination is an Exempted Consignee. Please amend your entry and resubmit.	 | 	ComplementConsigneeTrader	 | 
-| 	12	 | 	e	 | 	You must provide a valid Trader ID if the destination is 'Tax Warehouse'. Please amend your entry and resubmit.	 | 	Traderid	 | 
-| 	12	 | 	f	 | 	The delivery place customs office must be present if the destination is 'Export'.	 | 	DeliveryPlaceCustomsOffice	 | 
-| 	12	 | 	g	 | 	The transport arranger information is required if they are not the consignee or the consignor. Please amend your entry and resubmit.	 | 	TransportArrangerTrader	 | 
-| 	12	 | 	h	 | 	The import Single Administrative Document (SAD) must not be present if the origin type code is 'Tax Warehouse' or 'Duty Paid'. Please amend your entry and resubmit.	 | 	ImportSad	 | 
-| 	13	 | 	a	 | 	You must provide the trader name or the Trader ID. Please amend your entry and resubmit.	 | 	GuarantorTrader	 | 
-| 	13	 | 	b	 | 	You must provide the street name or the Trader ID. Please amend your entry and resubmit.	 | 	GuarantorTrader	 | 
-| 	13	 | 	c	 | 	You must provide the city or the Trader ID. Please amend your entry and resubmit.	 | 	GuarantorTrader	 | 
-| 	13	 | 	d	 | 	You must provide the postcode or the Trader ID. Please amend your entry and resubmit.	 | 	GuarantorTrader	 | 
-| 	13	 | 	e	 | 	The import Single Administrative Document (SAD) must be present if the origin type code is 'Import'. Please amend your entry and resubmit.	 | 	EadEsadDraft	 | 
-| 	8033	 | 		 | 	You must provide the delivery information of the trader if the destination is to either a Tax Warehouse or Direct Delivery. Please amend your entry and resubmit.	 | 	SubmittedDraftOfEADESAD	 | 
-| 	8034	 | 		 | 	The Consignee Trader information must be present unless the movement is to an unknown destination. Please amend your entry and resubmit	 | 	SubmittedDraftOfEADESAD	 | 
-| 	8035	 | 		 | 	The Trader ID for the Place of Dispatch must be present if the destination is Tax Warehouse or Duty Paid. Please amend your entry and resubmit.	 | 	SubmittedDraftOfEADESAD	 | 
-| 	8036	 | 		 | 	The Dispatch Import Office ID must be present where the destination is import. Please amend your entry and resubmit.	 | 	SubmittedDraftOfEADESAD	 | 
-| 	8037	 | 		 | 	The Complement Consignee Trader ID must be present if the destination is Exempt Organisation. Please amend your entry and resubmit.	 | 	SubmittedDraftOfEADESAD	 | 
-| 	8038	 | 		 | 	The Trader ID must be present if the destination is to a Tax Warehouse, or a Certified Consignee, or a Temporary Certified Consignee. Please amend your entry and resubmit.	 | 	SubmittedDraftOfEADESAD	 | 
-| 	8039	 | 		 | 	The Delivery Place Customs Office ID must be present if the destination is Export. Please amend your entry and resubmit.	 | 	SubmittedDraftOfEADESAD	 | 
-| 	8040	 | 		 | 	You must provide the Transport Arranger Trader ID if you are not the consignor or the consignee. Please amend your entry and resubmit	 | 	SubmittedDraftOfEADESAD	 | 
-| 	8041	 | 		 | 	The transport details can repeat up to a maximum of 30 times. Please amend your entry and resubmit.	 | 	SubmittedDraftOfEADESAD	 | 
-| 	8042	 | 		 | 	The body items can repeat up to a maximum of 999 times. Please amend your entry and resubmit.	 | 	SubmittedDraftOfEADESAD	 | 
-| 	8043	 | 		 | 	The body item reference number is not incremental. Please contact your software supplier for further advice.	 | 	SubmittedDraftOfEADESAD	 | 
-| 	8044	 | 		 | 	The submission message type must start at 1 or 3. Please contact your software supplier for further advice.	 | 	SubmissionMessageType	 | 
-| 	8045	 | 		 | 	You must provide a Trader ID if the Destination is to either a:<br></br><br></br>- Tax Warehouse<br></br>- Registered Consignee<br></br>- Temporary Registered Consignee<br></br>- Direct Delivery<br></br>- Certified Consignee<br></br>- Temporary Certified Consignee<br></br><br></br>or <br></br><br></br>- Return to the place of dispatch of the consignor. <br></br><br></br>Please amend your entry and resubmit.	 | 	ConsigneeTrader	 | 
-| 	8046	 | 		 | 	You do not need to provide a Trader ID if the Destination is not to a:<br></br><br></br>- Tax Warehouse<br></br> - Registered Consignee<br></br>- Temporary Registered Consignee<br></br> - Direct Delivery<br></br>- Export<br></br>- Certified Consignee<br></br>- Temporary Certified Consignee<br></br><br></br>or <br></br><br></br>- Return to the place of dispatch of the consignor<br></br><br></br>Please amend your entry and resubmit.	 | 	Traderid	 | 
-| 	8047	 | 		 | 	The Trader ID must be a valid Excise Number if the destination is to a Tax Warehouse, Registered Consignee, Temporary Registered Consignee, Direct Delivery, Certified Consignee, Temporary Certified Consignee or for Return to the place of dispatch of the consignor. Please amend your entry and resubmit.	 | 	Traderid	 | 
-| 	8048	 | 		 | 	If a guarantor is not required then the Trader ID must start with GB or XI. Please amend your entry and resubmit	 | 	Traderid	 | 
-| 	8052	 | 		 | 	You must provide a trader name for the selected movement type. Please amend your entry and resubmit.	 | 	DeliveryPlaceTrader	 | 
-| 	8053	 | 		 | 	You must provide a Street Name for the selected movement type. Please amend your entry and resubmit.	 | 	DeliveryPlaceTrader	 | 
-| 	8054	 | 		 | 	You must provide a Postcode for the selected movement type. Please amend your entry and resubmit.	 | 	DeliveryPlaceTrader	 | 
-| 	8055	 | 		 | 	You must provide a City Name for the selected movement type. Please amend your entry and resubmit.	 | 	DeliveryPlaceTrader	 | 
-| 	8056	 | 		 | 	The Trader ID is not required for Direct Deliveries. Please amend your entry and resubmit.	 | 	Traderid	 | 
-| 	8059	 | 		 | 	If the Trader ID and Trader Excise Number starts with GB or XI and the movement originates from a Tax Warehouse then the destination must be to another Tax Warehouse or for export. Please amend your entry and resubmit.	 | 	DestinationTypeCode	 | 
-| 	8061	 | 		 | 	If the movement is to an unknown destination (i.e. for energy products) then the transport mode must be sea transport or inland waterway transport	 | 	TransportModeCode	 | 
-| 	8062	 | 		 | 	You must provide a guarantor if the guarantor type is either the transporter or the owner of the excise products. Please amend your entry and resubmit	 | 	MovementGuarantee	 | 
-| 	8063	 | 		 | 	You can only provide one guarantor. Please amend your entry and resubmit	 | 	MovementGuarantee	 | 
-| 	8064	 | 		 | 	If a guarantor is not required then the destination type must be a tax warehouse. Please amend your entry and resubmit	 | 	GuarantorTypeCode	 | 
-| 	8065	 | 		 | 	A guarantor Trader ID is not required where the guarantor is a consignor or a consignee, or if a guarantor is not required for the movement. Please amend your entry and resubmit	 | 	GuarantorTrader	 | 
-| 	8067	 | 		 | 	The only excise products where a guarantor is not required are B000, W200 and W300. Please amend your entry and resubmit	 | 	ExciseProductCode	 | 
-| 	8068	 | 		 | 	If the destination type code is for unknown destination (i.e. energy products), then the Excise Product Code must start with an 'E'. Please amend your entry and resubmit	 | 	ExciseProductCode	 | 
-| 	8072	 | 		 | 	The Wine Product can only be present if the Excise Product Code starts with a 'W'. Please amend your entry and resubmit	 | 	WineProduct	 | 
-| 	8073	 | 		 | 	The Wine Operation Code can only be option '0' if no other Wine Operation Codes have been selected. Please amend your entry and resubmit	 | 	WineProduct	 | 
-| 	8074	 | 		 | 	The Third County of Origin Code must be provided for imported wine. Please amend your entry and resubmit	 | 	WineProduct	 | 
-| 	8076	 | 		 | 	The Third County of Origin Code in not required for non-imported wine. Please amend your entry and resubmit	 | 	ThirdCountryOfOrigin	 | 
-| 	8077	 | 		 | 	Each Wine Operation Code must be unique. Please amend your entry and resubmit	 | 	WineOperation	 | 
-| 	8081	 | 		 | 	The Identity of Transport Units must be entered if Transport Unit Code is not fixed transport installation. Please amend your entry and resubmit.	 | 	TransportDetails	 | 
-| 	8082	 | 		 | 	The Identity of transport Units field is not applicable as you have entered a Transport Unit Code of fixed transport installation. Please amend your entry and resubmit	 | 	IdentityOfTransportUnits	 | 
-| 	8083	 | 		 | 	You must enter a Date of Dispatch which is either today or within the next 7 days following today. Please amend your entry and resubmit.	 | 	DateOfDispatch	 | 
-| 	8084	 | 		 | 	The Date of Dispatch you entered is incorrect. It must be today or later. Please amend your entry and resubmit.	 | 	DateOfDispatch	 | 
-| 	8085	 | 		 | 	You have selected the deferred indicator. The Date of Dispatch must be on or before the date of submission. Please amend your entry and resubmit.	 | 	DateOfDispatch	 | 
-| 	8086	 | 		 | 	You have entered an Excise Product Code of S500. The correct CN Code to be input is 10000000. Please amend your entry and resubmit.	 | 	CnCode	 | 
-| 	8087	 | 		 | 	The Excise Product Category Code is not valid for this CN Code. Please enter a valid Excise Product Category Code.	 | 	ExciseProductCode	 | 
-| 	8088	 | 		 | 	The Guarantor Type Code is invalid. Please amend your entry and resubmit.	 | 	GuarantorTypeCode	 | 
-| 	8097	 | 		 | 	The Excise Product Code you have entered is not in the correct format. It should be alphanumeric starting with the letters E, T, W, B, I or S followed by three numeric characters. Please amend your entry and resubmit. 	 | 	ExciseProductCode	 | 
-| 	8130	 | 		 | 	You must provide the first transporter information. Please amend your entry and resubmit.	 | 	SubmittedDraftOfEADESAD	 | 
-| 	8131	 | 		 | 	The language code for the place of dispatch trader on the draft movement must be provided. Please contact your software supplier for further advice.	 | 	PlaceOfDispatchTrader	 | 
-| 	8132	 | 		 | 	You must provide the serial number of the certificate of exemption. Please amend your entry and resubmit.	 | 	ComplementConsigneeTrader	 | 
-| 	8133	 | 		 | 	The member state code must not be 'GB' or 'XI'. Please amend your entry and resubmit.	 | 	MemberStateCode	 | 
-| 	8134	 | 		 | 	The language code for the place of delivery on the draft movement must be provided. Please contact your software supplier for further advice.	 | 	DeliveryPlaceTrader	 | 
-| 	8135	 | 		 | 	If 'Other' has been selected for the transport mode code you must provide the complementary information. Please amend your entry and resubmit.	 | 	TransportModeCode	 | 
-| 	8136	 | 		 | 	The language code for the guarantor trader type on the draft movement must be provided. Please contact your software supplier for further advice.	 | 	GuarantorTrader	 | 
-| 	8137	 | 		 | 	You must enter a time of dispatch. Please amend your entry and resubmit.	 | 	EadEsadDraft	 | 
-| 	8140	 | 		 | 	The destination type must be one of:<br></br><br></br>- Tax warehouse<br></br> - Registered consignee<br></br>- Temporary registered consignee<br></br>- Direct delivery<br></br>- Exempted consignee<br></br>- Export<br></br>- Unknown destination<br></br>- Certified consignee<br></br>- Temporary certified consignee<br></br>- Return to the place of dispatch of the consignor<br></br><br></br>Please amend your entry and resubmit.	 | 	DestinationTypeCode	 | 
-| 	8149	 | 		 | 	The place of delivery information must not be present where the destination is to an Unknown Destination. Please amend your entry and resubmit.	 | 	DeliveryPlaceTrader	 | 
-| 	8150	 | 		 | 	The place of delivery information must not be present where the destination is for Export. Please amend your entry and resubmit.	 | 	DeliveryPlaceTrader	 | 
-| 	8151	 | 		 | 	The place of delivery information must not be present where the destination is to Registered Consignee. Please amend your entry and resubmit.	 | 	DeliveryPlaceTrader	 | 
-| 	8152	 | 		 | 	If Guarantor Type Code equals '5' Guarantor not required for qualifying UK to EU Movements then the mode of transport must be Sea Transport or Fixed Transport Installation.	 | 	TransportModeCode	 | 
-| 	8153	 | 		 | 	If Guarantor Type Code equals '5', Guarantor not required for qualifying UK to EU Movements then all Excise Product Codes must be Energy Products.	 | 	ExciseProductCode	 | 
-| 	8158	 | 		 | 	The consignee can be a guarantor for a movement to a UK warehouse or to an EU Certified Consignee.	 | 	GuarantorTypeCode	 | 
-| 	8159	 | 		 | 	The consignee can only be a guarantor for a movement to a UK warehouse	 | 	GuarantorTypeCode	 | 
-| 	8163	 | 		 | 	The consignee EORI number must only be present for an export movement. Please amend your entry and resubmit.	 | 	EoriNumber	 | 
-| 	8169	 | 		 | 	The alcoholic strength must not exceed 100. Please amend your entry and resubmit.	 | 	AlcoholicStrengthByVolumeInPercentage	 | 
-| 	8216	 | 		 | 	The complementary information can only be provided if the transport mode equals 'Other'. Please amend your entry and resubmit	 | 	ComplementaryInformation	 | 
-| 	8217	 | 		 | 	The gross mass can not be less than the net mass. Please amend your entry and resubmit.	 | 	GrossMass	 | 
-| 	8218	 | 		 | 	The alcoholic strength must not be less than 0.5. Please amend your entry and resubmit.	 | 	AlcoholicStrengthByVolumeInPercentage	 | 
-| 	8219	 | 		 | 	The time of despatch should not specify milliseconds. Please amend your entry and resubmit.	 | 	TimeOfDispatch	 | 
-| 	8500	 | 		 | 	The document type must be present. Please amend your entry and resubmit	 | 	DocumentCertificate	 | 
-| 	8501	 | 		 | 	The document reference must be present. Please amend your entry and resubmit	 | 	DocumentCertificate	 | 
-| 	8502	 | 		 | 	The document description is no longer valid. Please amend your entry and resubmit	 | 	DocumentDescription	 | 
-| 	8503	 | 		 | 	The reference of document is no longer valid. Please amend your entry and resubmit	 | 	ReferenceOfDocument	 | 
-| 	8504	 | 		 | 	The CN Code must be greater than zero. Please amend your entry and resubmit	 | 	CnCode	 | 
-| 	8505	 | 		 | 	The number of packages is '0' so there must be at least one other package with the same Shipping Mark value where the number of packages has been supplied. Please amend your entry and resubmit	 | 	Package	 | 
-| 	8506	 | 		 | 	A Shipping Mark must be present if the number of packages equals 0. Please amend your entry and resubmit	 | 	Package	 | 
-| 	8550	 | 		 | 	The UK consignee Trader ID must start with GBWK or XIWK where the place of destination is a UK excise warehouse. Please amend your entry and resubmit.	 | 	Traderid	 | 
-| 	8551	 | 		 | 	The consignee Trader ID must not start with GB or XI when the place of destination is a non-UK excise warehouse, Registered Consignee, Temporary Registered Consignee, Direct Delivery, Certified Consignee, Temporary Certified Consignee or Return to the place of dispatch of the consignor. Please amend your entry and resubmit.	 | 	Traderid	 | 
-| 	8552	 | 		 | 	The UK consignor Trader Excise Number must start with GBWK or XIWK where the place of dispatch is a UK excise warehouse. Please amend your entry and resubmit.	 | 	TraderExciseNumber	 | 
-| 	8553	 | 		 | 	The UK consignor Trader Excise Number must start with GBRC or XIRC where the place of dispatch is a UK place of import. Please amend your entry and resubmit.	 | 	TraderExciseNumber	 | 
-| 	8555	 | 		 | 	The UK place of delivery excise warehouse ID must start with GB00 where the place of destination is a UK excise warehouse. Please amend your entry and resubmit.	 | 	Traderid	 | 
-| 	8556	 | 		 | 	The consignee delivery place trader ID must not start with GB or XI where the place of destination is either a non-UK excise warehouse or Temporary Registered Consignee. Please amend your entry and resubmit.	 | 	Traderid	 | 
-| 	8602	 | 		 | 	The consignee trader ID must start with XIWK where the place of destination is a NI excise warehouse. Please amend your entry and resubmit or contact your software supplier.	 | 	Traderid	 | 
-| 	8605	 | 		 | 	The consignee delivery place Trader ID must start with XI00 where the place of destination is to an excise warehouse in Northern Ireland. Please amend your entry and resubmit.	 | 	Traderid	 | 
-| 	8606	 | 		 | 	The consignee delivery place trader postcode must start with 'BT' where the place of destination is to an excise warehouse in Northern Ireland. Please amend your entry and resubmit.	 | 	Postcode	 | 
-| 	8607	 | 		 | 	The consignee delivery place trader postcode must not start with 'BT' where the place of destination is to an excise warehouse in Great Britain. Please amend your entry and resubmit.	 | 	Postcode	 | 
-| 	8610	 | 		 | 	If the place of dispatch excise warehouse ID starts with GB then the consignee trader ID must start with GB or XI. Please amend your entry and resubmit.	 | 	Traderid	 | 
-| 	8611	 | 		 | 	If the Registered Consignor ID starts with GB then the consignee trader ID must start with GB or XI. Please amend your entry and resubmit.	 | 	Traderid	 | 
-| 	8612	 | 		 | 	If the consignee Trader ID starts with XI then the postcode must start with "BT" (case insensitive)	 | 	Postcode	 | 
-| 	8613	 | 		 | 	If the consignee Trader ID starts with GB then the postcode must not start with "BT" (case insensitive)	 | 	Postcode	 | 
-| 	8614	 | 		 | 	If the consignor excise ID starts with XI then the postcode must start with "BT" (case insensitive)	 | 	Postcode	 | 
-| 	8615	 | 		 | 	If the consignor excise ID starts with GB then the postcode must not start with "BT"	 | 	Postcode	 | 
-| 	8616	 | 		 | 	If the consignor trader ID starts with GB then the place of dispatch excise ID must start with GB00	 | 	ReferenceOfTaxWarehouse	 | 
-| 	8617	 | 		 | 	If the consignor trader ID starts with XI then the place of dispatch excise ID must start with GB00 or XI00	 | 	ReferenceOfTaxWarehouse	 | 
-| 	8618	 | 		 | 	The place trader postcode must not start with 'BT' where the place of dispatch if from an excise warehouse in Great Britain. Please amend your entry and resubmit.	 | 	Postcode	 | 
-| 	8619	 | 		 | 	The place trader postcode must start with 'BT' where the place of dispatch if from an excise warehouse in Northern Ireland. Please amend your entry and resubmit.	 | 	Postcode	 | 
-| 	8620	 | 		 | 	If the consignee place of dispatch excise ID starts with GB then the delivery place customs office must also start with GB. Please amend your entry and resubmit.	 | 	ReferenceNumber	 | 
-| 	8621	 | 		 | 	If the consignee place of dispatch excise ID starts with XI then the delivery place customs office must not start with GB. Please amend your entry and resubmit.	 | 	ReferenceNumber	 | 
-| 	8622	 | 		 | 	If the Registered Consignor excise ID starts with GB then the delivery place customs office must also start with GB. Please amend your entry and resubmit.	 | 	ReferenceNumber	 | 
-| 	8623	 | 		 | 	If the Registered Consignor excise ID starts with XI then the delivery place customs office must not start with GB. Please amend your entry and resubmit.	 | 	ReferenceNumber	 | 
-| 	8624	 | 		 | 	If the Trader ID and Trader Excise Number starts with 'GB' or 'XI' and the movement is imported then the destination must be to a Tax Warehouse, for export or to an unknown destination (for example, for energy products). Please amend your entry and resubmit.	 | 	DestinationTypeCode	 | 
-| 	8700	 | 		 | 	If the consignor trader ID starts with GB then the dispatch import office ID must start with GB. Please amend your entry and resubmit	 | 	ReferenceNumber	 | 
-| 	8701	 | 		 | 	If the consignor trader ID starts with XI then the dispatch import office ID must start with XI. Please amend your entry and resubmit	 | 	ReferenceNumber	 | 
-| 	8702	 | 		 | 	If the consignor trader ID starts with GB then the competent authority dispatch office ID must start with GB. Please amend your entry and resubmit	 | 	ReferenceNumber	 | 
-| 	8704	 | 		 | 	If the consignor trader ID starts with GB then the wine product category must not be 1, 2, or 3. Please amend your entry and resubmit	 | 	WineProductCategory	 | 
-| 	8709	 | 		 | 	If reference of tax warehouse has been submitted and starts with "XI", then the competent authority dispatch office ID must start with XI. Please amend your entry and resubmit	 | 	ReferenceNumber	 | 
-| 	8710	 | 		 | 	If reference of tax warehouse has been submitted and starts with "GB", then the competent authority dispatch office ID must start with GB. Please amend your entry and resubmit	 | 	ReferenceNumber	 | 
-| 	8711	 | 		 | 	If reference of tax warehouse has not been submitted and the consignor trader ID starts with "XI", then the competent authority dispatch office ID must start with XI. Please amend your entry and resubmit	 | 	ReferenceNumber	 | 
-| 	8712	 | 		 | 	The submission type must be one of:<br></br><br></br>- Standard submission<br></br>- Submission for export (local clearance)<br></br>- Submission for Duty Paid B2B<br></br><br></br>Please amend your entry and resubmit.	 | 	SubmissionMessageType	 | 
-| 	8713	 | 		 | 	The origin type must be one of:<br></br><br></br>- Tax warehouse<br></br>- Import <br></br>- Duty Paid<br></br><br></br>Please amend your entry and resubmit.	 | 	OriginTypeCode	 | 
-| 	8714 (New)	 | 		 | 	If the submission type is Submission for Duty Paid B2B, then the Destination must be to either<br></br><br></br> - Certified Consignee<br></br><br></br>or <br></br><br></br>- Temporary Certified Consignee<br></br><br></br>Please amend your entry and resubmit.	 | 	SubmissionMessageType	 | 
-| 	8715 (New)	 | 		 | 	If the submission type is Submission for Duty Paid B2B, then the Destination can not be:<br></br><br></br>- Tax warehouse<br></br>- Registered consignee<br></br>- Temporary registered consignee<br></br>- Direct delivery<br></br>- Exempted consignee<br></br>- Export<br></br>- Unknown destination<br></br><br></br>Please amend your entry and resubmit.	 | 	SubmissionMessageType	 | 
-| 	8716 (New)	 | 		 | 	The UK consignor Trader Excise Number must start with XIPA or XIPC where the place of dispatch is for Duty Paid. Please amend your entry and resubmit.	 | 	TraderExciseNumber	 | 
-| 	8717 (New)	 | 		 | 	The UK consignor Trader Excise Number must start with XIPA or XIPC where the submission message type is for Duty Paid. Please amend your entry and resubmit.	 | 	TraderExciseNumber	 | 
-| 	8718 (New)	 | 		 | 	The Reference of Tax Warehouse must not be present where the Submission Message Type is 'Duty Paid'. Please amend your entry and resubmit.	 | 	ReferenceOfTaxWarehouse	 | 
-| 	8719 (New)	 | 		 | 	The Post Code must be entered where the Submission Message Type is 'Duty Paid'. Please amend your entry and resubmit.	 | 	Postcode	 | 
-| 	8720 (New)	 | 		 | 	The Trader Name must be entered where the Submission Message Type is 'Duty Paid'. Please amend your entry and resubmit.	 | 	TraderName	 | 
-| 	8721 (New)	 | 		 | 	The Street Name must be entered where the Submission Message Type is 'Duty Paid'. Please amend your entry and resubmit.	 | 	StreetName	 | 
-| 	8722 (New)	 | 		 | 	The City must be entered where the Submission Message Type is 'Duty Paid'. Please amend your entry and resubmit.	 | 	City	 | 
-| 	8723 (New)	 | 		 | 	If the Trader ID and Trader Excise Number start with 'XI' and the movement is duty paid then the destination must be to a Certified Consignee or to a Temporary Certified Consignee. Please amend your entry and resubmit.	 | 	DestinationTypeCode	 | 
-| 	8724 (New)	 | 		 | 	The Excise Product Code of S600 can only be used for Duty paid. Please enter a valid Excise Product Category Code.	 | 	ExciseProductCode	 | 
-| 	8725 (New)	 | 		 | 	The Excise Product Code is not valid for this submission message type (movement in duty suspension). Please enter a valid Excise Product Category Code.	 | 	ExciseProductCode	 | 
-| 	8726 (New)	 | 		 | 	The origin type must be Duty Paid. Please amend your entry and resubmit.	 | 	OriginTypeCode	 | 
+| 	12	 | 	a	 | 	The consignee trader information must not be present where the destination is unknown. Please amend your entry and resubmit.	 | 	ConsigneeTrader	 |
+| 	12	 | 	b	 | 	The place of dispatch trader information must not be present where the origin type code is 'Import'. Please amend your entry and resubmit.	 | 	PlaceOfDispatchTrader	 |
+| 	12	 | 	c	 | 	The dispatch import office must not be present where the origin type code is 'Tax Warehouse' or 'Duty Paid'. Please amend your entry and resubmit.	 | 	DispatchImportOffice	 |
+| 	12	 | 	d	 | 	The complement consignee trader information must be present if the destination is an Exempted Consignee. Please amend your entry and resubmit.	 | 	ComplementConsigneeTrader	 |
+| 	12	 | 	e	 | 	You must provide a valid Trader ID if the destination is 'Tax Warehouse'. Please amend your entry and resubmit.	 | 	Traderid	 |
+| 	12	 | 	f	 | 	The delivery place customs office must be present if the destination is 'Export'.	 | 	DeliveryPlaceCustomsOffice	 |
+| 	12	 | 	g	 | 	The transport arranger information is required if they are not the consignee or the consignor. Please amend your entry and resubmit.	 | 	TransportArrangerTrader	 |
+| 	12	 | 	h	 | 	The import Single Administrative Document (SAD) must not be present if the origin type code is 'Tax Warehouse' or 'Duty Paid'. Please amend your entry and resubmit.	 | 	ImportSad	 |
+| 	13	 | 	a	 | 	You must provide the trader name or the Trader ID. Please amend your entry and resubmit.	 | 	GuarantorTrader	 |
+| 	13	 | 	b	 | 	You must provide the street name or the Trader ID. Please amend your entry and resubmit.	 | 	GuarantorTrader	 |
+| 	13	 | 	c	 | 	You must provide the city or the Trader ID. Please amend your entry and resubmit.	 | 	GuarantorTrader	 |
+| 	13	 | 	d	 | 	You must provide the postcode or the Trader ID. Please amend your entry and resubmit.	 | 	GuarantorTrader	 |
+| 	13	 | 	e	 | 	The import Single Administrative Document (SAD) must be present if the origin type code is 'Import'. Please amend your entry and resubmit.	 | 	EadEsadDraft	 |
+| 	8033	 | 		 | 	You must provide the delivery information of the trader if the destination is to either a Tax Warehouse or Direct Delivery. Please amend your entry and resubmit.	 | 	SubmittedDraftOfEADESAD	 |
+| 	8034	 | 		 | 	The Consignee Trader information must be present unless the movement is to an unknown destination. Please amend your entry and resubmit	 | 	SubmittedDraftOfEADESAD	 |
+| 	8035	 | 		 | 	The Trader ID for the Place of Dispatch must be present if the destination is Tax Warehouse or Duty Paid. Please amend your entry and resubmit.	 | 	SubmittedDraftOfEADESAD	 |
+| 	8036	 | 		 | 	The Dispatch Import Office ID must be present where the destination is import. Please amend your entry and resubmit.	 | 	SubmittedDraftOfEADESAD	 |
+| 	8037	 | 		 | 	The Complement Consignee Trader ID must be present if the destination is Exempt Organisation. Please amend your entry and resubmit.	 | 	SubmittedDraftOfEADESAD	 |
+| 	8038	 | 		 | 	The Trader ID must be present if the destination is to a Tax Warehouse, or a Certified Consignee, or a Temporary Certified Consignee. Please amend your entry and resubmit.	 | 	SubmittedDraftOfEADESAD	 |
+| 	8039	 | 		 | 	The Delivery Place Customs Office ID must be present if the destination is Export. Please amend your entry and resubmit.	 | 	SubmittedDraftOfEADESAD	 |
+| 	8040	 | 		 | 	You must provide the Transport Arranger Trader ID if you are not the consignor or the consignee. Please amend your entry and resubmit	 | 	SubmittedDraftOfEADESAD	 |
+| 	8041	 | 		 | 	The transport details can repeat up to a maximum of 30 times. Please amend your entry and resubmit.	 | 	SubmittedDraftOfEADESAD	 |
+| 	8042	 | 		 | 	The body items can repeat up to a maximum of 999 times. Please amend your entry and resubmit.	 | 	SubmittedDraftOfEADESAD	 |
+| 	8043	 | 		 | 	The body item reference number is not incremental. Please contact your software supplier for further advice.	 | 	SubmittedDraftOfEADESAD	 |
+| 	8044	 | 		 | 	The submission message type must start at 1 or 3. Please contact your software supplier for further advice.	 | 	SubmissionMessageType	 |
+| 	8045	 | 		 | 	You must provide a Trader ID if the Destination is to either a:<br></br><br></br>- Tax Warehouse<br></br>- Registered Consignee<br></br>- Temporary Registered Consignee<br></br>- Direct Delivery<br></br>- Certified Consignee<br></br>- Temporary Certified Consignee<br></br><br></br>or <br></br><br></br>- Return to the place of dispatch of the consignor. <br></br><br></br>Please amend your entry and resubmit.	 | 	ConsigneeTrader	 |
+| 	8046	 | 		 | 	You do not need to provide a Trader ID if the Destination is not to a:<br></br><br></br>- Tax Warehouse<br></br> - Registered Consignee<br></br>- Temporary Registered Consignee<br></br> - Direct Delivery<br></br>- Export<br></br>- Certified Consignee<br></br>- Temporary Certified Consignee<br></br><br></br>or <br></br><br></br>- Return to the place of dispatch of the consignor<br></br><br></br>Please amend your entry and resubmit.	 | 	Traderid	 |
+| 	8047	 | 		 | 	The Trader ID must be a valid Excise Number if the destination is to a Tax Warehouse, Registered Consignee, Temporary Registered Consignee, Direct Delivery, Certified Consignee, Temporary Certified Consignee or for Return to the place of dispatch of the consignor. Please amend your entry and resubmit.	 | 	Traderid	 |
+| 	8048	 | 		 | 	If a guarantor is not required then the Trader ID must start with GB or XI. Please amend your entry and resubmit	 | 	Traderid	 |
+| 	8052	 | 		 | 	You must provide a trader name for the selected movement type. Please amend your entry and resubmit.	 | 	DeliveryPlaceTrader	 |
+| 	8053	 | 		 | 	You must provide a Street Name for the selected movement type. Please amend your entry and resubmit.	 | 	DeliveryPlaceTrader	 |
+| 	8054	 | 		 | 	You must provide a Postcode for the selected movement type. Please amend your entry and resubmit.	 | 	DeliveryPlaceTrader	 |
+| 	8055	 | 		 | 	You must provide a City Name for the selected movement type. Please amend your entry and resubmit.	 | 	DeliveryPlaceTrader	 |
+| 	8056	 | 		 | 	The Trader ID is not required for Direct Deliveries. Please amend your entry and resubmit.	 | 	Traderid	 |
+| 	8059	 | 		 | 	If the Trader ID and Trader Excise Number starts with GB or XI and the movement originates from a Tax Warehouse then the destination must be to another Tax Warehouse or for export. Please amend your entry and resubmit.	 | 	DestinationTypeCode	 |
+| 	8061	 | 		 | 	If the movement is to an unknown destination (i.e. for energy products) then the transport mode must be sea transport or inland waterway transport	 | 	TransportModeCode	 |
+| 	8062	 | 		 | 	You must provide a guarantor if the guarantor type is either the transporter or the owner of the excise products. Please amend your entry and resubmit	 | 	MovementGuarantee	 |
+| 	8063	 | 		 | 	You can only provide one guarantor. Please amend your entry and resubmit	 | 	MovementGuarantee	 |
+| 	8064	 | 		 | 	If a guarantor is not required then the destination type must be a tax warehouse. Please amend your entry and resubmit	 | 	GuarantorTypeCode	 |
+| 	8065	 | 		 | 	A guarantor Trader ID is not required where the guarantor is a consignor or a consignee, or if a guarantor is not required for the movement. Please amend your entry and resubmit	 | 	GuarantorTrader	 |
+| 	8067	 | 		 | 	The only excise products where a guarantor is not required are B000, W200 and W300. Please amend your entry and resubmit	 | 	ExciseProductCode	 |
+| 	8068	 | 		 | 	If the destination type code is for unknown destination (i.e. energy products), then the Excise Product Code must start with an 'E'. Please amend your entry and resubmit	 | 	ExciseProductCode	 |
+| 	8072	 | 		 | 	The Wine Product can only be present if the Excise Product Code starts with a 'W'. Please amend your entry and resubmit	 | 	WineProduct	 |
+| 	8073	 | 		 | 	The Wine Operation Code can only be option '0' if no other Wine Operation Codes have been selected. Please amend your entry and resubmit	 | 	WineProduct	 |
+| 	8074	 | 		 | 	The Third County of Origin Code must be provided for imported wine. Please amend your entry and resubmit	 | 	WineProduct	 |
+| 	8076	 | 		 | 	The Third County of Origin Code in not required for non-imported wine. Please amend your entry and resubmit	 | 	ThirdCountryOfOrigin	 |
+| 	8077	 | 		 | 	Each Wine Operation Code must be unique. Please amend your entry and resubmit	 | 	WineOperation	 |
+| 	8081	 | 		 | 	The Identity of Transport Units must be entered if Transport Unit Code is not fixed transport installation. Please amend your entry and resubmit.	 | 	TransportDetails	 |
+| 	8082	 | 		 | 	The Identity of transport Units field is not applicable as you have entered a Transport Unit Code of fixed transport installation. Please amend your entry and resubmit	 | 	IdentityOfTransportUnits	 |
+| 	8083	 | 		 | 	You must enter a Date of Dispatch which is either today or within the next 7 days following today. Please amend your entry and resubmit.	 | 	DateOfDispatch	 |
+| 	8084	 | 		 | 	The Date of Dispatch you entered is incorrect. It must be today or later. Please amend your entry and resubmit.	 | 	DateOfDispatch	 |
+| 	8085	 | 		 | 	You have selected the deferred indicator. The Date of Dispatch must be on or before the date of submission. Please amend your entry and resubmit.	 | 	DateOfDispatch	 |
+| 	8086	 | 		 | 	You have entered an Excise Product Code of S500. The correct CN Code to be input is 10000000. Please amend your entry and resubmit.	 | 	CnCode	 |
+| 	8087	 | 		 | 	The Excise Product Category Code is not valid for this CN Code. Please enter a valid Excise Product Category Code.	 | 	ExciseProductCode	 |
+| 	8088	 | 		 | 	The Guarantor Type Code is invalid. Please amend your entry and resubmit.	 | 	GuarantorTypeCode	 |
+| 	8097	 | 		 | 	The Excise Product Code you have entered is not in the correct format. It should be alphanumeric starting with the letters E, T, W, B, I or S followed by three numeric characters. Please amend your entry and resubmit. 	 | 	ExciseProductCode	 |
+| 	8130	 | 		 | 	You must provide the first transporter information. Please amend your entry and resubmit.	 | 	SubmittedDraftOfEADESAD	 |
+| 	8131	 | 		 | 	The language code for the place of dispatch trader on the draft movement must be provided. Please contact your software supplier for further advice.	 | 	PlaceOfDispatchTrader	 |
+| 	8132	 | 		 | 	You must provide the serial number of the certificate of exemption. Please amend your entry and resubmit.	 | 	ComplementConsigneeTrader	 |
+| 	8133	 | 		 | 	The member state code must not be 'GB' or 'XI'. Please amend your entry and resubmit.	 | 	MemberStateCode	 |
+| 	8134	 | 		 | 	The language code for the place of delivery on the draft movement must be provided. Please contact your software supplier for further advice.	 | 	DeliveryPlaceTrader	 |
+| 	8135	 | 		 | 	If 'Other' has been selected for the transport mode code you must provide the complementary information. Please amend your entry and resubmit.	 | 	TransportModeCode	 |
+| 	8136	 | 		 | 	The language code for the guarantor trader type on the draft movement must be provided. Please contact your software supplier for further advice.	 | 	GuarantorTrader	 |
+| 	8137	 | 		 | 	You must enter a time of dispatch. Please amend your entry and resubmit.	 | 	EadEsadDraft	 |
+| 	8140	 | 		 | 	The destination type must be one of:<br></br><br></br>- Tax warehouse<br></br> - Registered consignee<br></br>- Temporary registered consignee<br></br>- Direct delivery<br></br>- Exempted consignee<br></br>- Export<br></br>- Unknown destination<br></br>- Certified consignee<br></br>- Temporary certified consignee<br></br>- Return to the place of dispatch of the consignor<br></br><br></br>Please amend your entry and resubmit.	 | 	DestinationTypeCode	 |
+| 	8149	 | 		 | 	The place of delivery information must not be present where the destination is to an Unknown Destination. Please amend your entry and resubmit.	 | 	DeliveryPlaceTrader	 |
+| 	8150	 | 		 | 	The place of delivery information must not be present where the destination is for Export. Please amend your entry and resubmit.	 | 	DeliveryPlaceTrader	 |
+| 	8151	 | 		 | 	The place of delivery information must not be present where the destination is to Registered Consignee. Please amend your entry and resubmit.	 | 	DeliveryPlaceTrader	 |
+| 	8152	 | 		 | 	If Guarantor Type Code equals '5' Guarantor not required for qualifying UK to EU Movements then the mode of transport must be Sea Transport or Fixed Transport Installation.	 | 	TransportModeCode	 |
+| 	8153	 | 		 | 	If Guarantor Type Code equals '5', Guarantor not required for qualifying UK to EU Movements then all Excise Product Codes must be Energy Products.	 | 	ExciseProductCode	 |
+| 	8158	 | 		 | 	The consignee can be a guarantor for a movement to a UK warehouse or to an EU Certified Consignee.	 | 	GuarantorTypeCode	 |
+| 	8159	 | 		 | 	The consignee can only be a guarantor for a movement to a UK warehouse	 | 	GuarantorTypeCode	 |
+| 	8163	 | 		 | 	The consignee EORI number must only be present for an export movement. Please amend your entry and resubmit.	 | 	EoriNumber	 |
+| 	8169	 | 		 | 	The alcoholic strength must not exceed 100. Please amend your entry and resubmit.	 | 	AlcoholicStrengthByVolumeInPercentage	 |
+| 	8216	 | 		 | 	The complementary information can only be provided if the transport mode equals 'Other'. Please amend your entry and resubmit	 | 	ComplementaryInformation	 |
+| 	8217	 | 		 | 	The gross mass can not be less than the net mass. Please amend your entry and resubmit.	 | 	GrossMass	 |
+| 	8218	 | 		 | 	The alcoholic strength must not be less than 0.5. Please amend your entry and resubmit.	 | 	AlcoholicStrengthByVolumeInPercentage	 |
+| 	8219	 | 		 | 	The time of despatch should not specify milliseconds. Please amend your entry and resubmit.	 | 	TimeOfDispatch	 |
+| 	8500	 | 		 | 	The document type must be present. Please amend your entry and resubmit	 | 	DocumentCertificate	 |
+| 	8501	 | 		 | 	The document reference must be present. Please amend your entry and resubmit	 | 	DocumentCertificate	 |
+| 	8502	 | 		 | 	The document description is no longer valid. Please amend your entry and resubmit	 | 	DocumentDescription	 |
+| 	8503	 | 		 | 	The reference of document is no longer valid. Please amend your entry and resubmit	 | 	ReferenceOfDocument	 |
+| 	8504	 | 		 | 	The CN Code must be greater than zero. Please amend your entry and resubmit	 | 	CnCode	 |
+| 	8505	 | 		 | 	The number of packages is '0' so there must be at least one other package with the same Shipping Mark value where the number of packages has been supplied. Please amend your entry and resubmit	 | 	Package	 |
+| 	8506	 | 		 | 	A Shipping Mark must be present if the number of packages equals 0. Please amend your entry and resubmit	 | 	Package	 |
+| 	8550	 | 		 | 	The UK consignee Trader ID must start with GBWK or XIWK where the place of destination is a UK excise warehouse. Please amend your entry and resubmit.	 | 	Traderid	 |
+| 	8551	 | 		 | 	The consignee Trader ID must not start with GB or XI when the place of destination is a non-UK excise warehouse, Registered Consignee, Temporary Registered Consignee, Direct Delivery, Certified Consignee, Temporary Certified Consignee or Return to the place of dispatch of the consignor. Please amend your entry and resubmit.	 | 	Traderid	 |
+| 	8552	 | 		 | 	The UK consignor Trader Excise Number must start with GBWK or XIWK where the place of dispatch is a UK excise warehouse. Please amend your entry and resubmit.	 | 	TraderExciseNumber	 |
+| 	8553	 | 		 | 	The UK consignor Trader Excise Number must start with GBRC or XIRC where the place of dispatch is a UK place of import. Please amend your entry and resubmit.	 | 	TraderExciseNumber	 |
+| 	8555	 | 		 | 	The UK place of delivery excise warehouse ID must start with GB00 where the place of destination is a UK excise warehouse. Please amend your entry and resubmit.	 | 	Traderid	 |
+| 	8556	 | 		 | 	The consignee delivery place trader ID must not start with GB or XI where the place of destination is either a non-UK excise warehouse or Temporary Registered Consignee. Please amend your entry and resubmit.	 | 	Traderid	 |
+| 	8602	 | 		 | 	The consignee trader ID must start with XIWK where the place of destination is a NI excise warehouse. Please amend your entry and resubmit or contact your software supplier.	 | 	Traderid	 |
+| 	8605	 | 		 | 	The consignee delivery place Trader ID must start with XI00 where the place of destination is to an excise warehouse in Northern Ireland. Please amend your entry and resubmit.	 | 	Traderid	 |
+| 	8606	 | 		 | 	The consignee delivery place trader postcode must start with 'BT' where the place of destination is to an excise warehouse in Northern Ireland. Please amend your entry and resubmit.	 | 	Postcode	 |
+| 	8607	 | 		 | 	The consignee delivery place trader postcode must not start with 'BT' where the place of destination is to an excise warehouse in Great Britain. Please amend your entry and resubmit.	 | 	Postcode	 |
+| 	8610	 | 		 | 	If the place of dispatch excise warehouse ID starts with GB then the consignee trader ID must start with GB or XI. Please amend your entry and resubmit.	 | 	Traderid	 |
+| 	8611	 | 		 | 	If the Registered Consignor ID starts with GB then the consignee trader ID must start with GB or XI. Please amend your entry and resubmit.	 | 	Traderid	 |
+| 	8612	 | 		 | 	If the consignee Trader ID starts with XI then the postcode must start with "BT" (case insensitive)	 | 	Postcode	 |
+| 	8613	 | 		 | 	If the consignee Trader ID starts with GB then the postcode must not start with "BT" (case insensitive)	 | 	Postcode	 |
+| 	8614	 | 		 | 	If the consignor excise ID starts with XI then the postcode must start with "BT" (case insensitive)	 | 	Postcode	 |
+| 	8615	 | 		 | 	If the consignor excise ID starts with GB then the postcode must not start with "BT"	 | 	Postcode	 |
+| 	8616	 | 		 | 	If the consignor trader ID starts with GB then the place of dispatch excise ID must start with GB00	 | 	ReferenceOfTaxWarehouse	 |
+| 	8617	 | 		 | 	If the consignor trader ID starts with XI then the place of dispatch excise ID must start with GB00 or XI00	 | 	ReferenceOfTaxWarehouse	 |
+| 	8618	 | 		 | 	The place trader postcode must not start with 'BT' where the place of dispatch if from an excise warehouse in Great Britain. Please amend your entry and resubmit.	 | 	Postcode	 |
+| 	8619	 | 		 | 	The place trader postcode must start with 'BT' where the place of dispatch if from an excise warehouse in Northern Ireland. Please amend your entry and resubmit.	 | 	Postcode	 |
+| 	8620	 | 		 | 	If the consignee place of dispatch excise ID starts with GB then the delivery place customs office must also start with GB. Please amend your entry and resubmit.	 | 	ReferenceNumber	 |
+| 	8621	 | 		 | 	If the consignee place of dispatch excise ID starts with XI then the delivery place customs office must not start with GB. Please amend your entry and resubmit.	 | 	ReferenceNumber	 |
+| 	8622	 | 		 | 	If the Registered Consignor excise ID starts with GB then the delivery place customs office must also start with GB. Please amend your entry and resubmit.	 | 	ReferenceNumber	 |
+| 	8623	 | 		 | 	If the Registered Consignor excise ID starts with XI then the delivery place customs office must not start with GB. Please amend your entry and resubmit.	 | 	ReferenceNumber	 |
+| 	8624	 | 		 | 	If the Trader ID and Trader Excise Number starts with 'GB' or 'XI' and the movement is imported then the destination must be to a Tax Warehouse, for export or to an unknown destination (for example, for energy products). Please amend your entry and resubmit.	 | 	DestinationTypeCode	 |
+| 	8700	 | 		 | 	If the consignor trader ID starts with GB then the dispatch import office ID must start with GB. Please amend your entry and resubmit	 | 	ReferenceNumber	 |
+| 	8701	 | 		 | 	If the consignor trader ID starts with XI then the dispatch import office ID must start with XI. Please amend your entry and resubmit	 | 	ReferenceNumber	 |
+| 	8702	 | 		 | 	If the consignor trader ID starts with GB then the competent authority dispatch office ID must start with GB. Please amend your entry and resubmit	 | 	ReferenceNumber	 |
+| 	8704	 | 		 | 	If the consignor trader ID starts with GB then the wine product category must not be 1, 2, or 3. Please amend your entry and resubmit	 | 	WineProductCategory	 |
+| 	8709	 | 		 | 	If reference of tax warehouse has been submitted and starts with "XI", then the competent authority dispatch office ID must start with XI. Please amend your entry and resubmit	 | 	ReferenceNumber	 |
+| 	8710	 | 		 | 	If reference of tax warehouse has been submitted and starts with "GB", then the competent authority dispatch office ID must start with GB. Please amend your entry and resubmit	 | 	ReferenceNumber	 |
+| 	8711	 | 		 | 	If reference of tax warehouse has not been submitted and the consignor trader ID starts with "XI", then the competent authority dispatch office ID must start with XI. Please amend your entry and resubmit	 | 	ReferenceNumber	 |
+| 	8712	 | 		 | 	The submission type must be one of:<br></br><br></br>- Standard submission<br></br>- Submission for export (local clearance)<br></br>- Submission for Duty Paid B2B<br></br><br></br>Please amend your entry and resubmit.	 | 	SubmissionMessageType	 |
+| 	8713	 | 		 | 	The origin type must be one of:<br></br><br></br>- Tax warehouse<br></br>- Import <br></br>- Duty Paid<br></br><br></br>Please amend your entry and resubmit.	 | 	OriginTypeCode	 |
+| 	8714 (New)	 | 		 | 	If the submission type is Submission for Duty Paid B2B, then the Destination must be to either<br></br><br></br> - Certified Consignee<br></br><br></br>or <br></br><br></br>- Temporary Certified Consignee<br></br><br></br>Please amend your entry and resubmit.	 | 	SubmissionMessageType	 |
+| 	8715 (New)	 | 		 | 	If the submission type is Submission for Duty Paid B2B, then the Destination can not be:<br></br><br></br>- Tax warehouse<br></br>- Registered consignee<br></br>- Temporary registered consignee<br></br>- Direct delivery<br></br>- Exempted consignee<br></br>- Export<br></br>- Unknown destination<br></br><br></br>Please amend your entry and resubmit.	 | 	SubmissionMessageType	 |
+| 	8716 (New)	 | 		 | 	The UK consignor Trader Excise Number must start with XIPA or XIPC where the place of dispatch is for Duty Paid. Please amend your entry and resubmit.	 | 	TraderExciseNumber	 |
+| 	8717 (New)	 | 		 | 	The UK consignor Trader Excise Number must start with XIPA or XIPC where the submission message type is for Duty Paid. Please amend your entry and resubmit.	 | 	TraderExciseNumber	 |
+| 	8718 (New)	 | 		 | 	The Reference of Tax Warehouse must not be present where the Submission Message Type is 'Duty Paid'. Please amend your entry and resubmit.	 | 	ReferenceOfTaxWarehouse	 |
+| 	8719 (New)	 | 		 | 	The Post Code must be entered where the Submission Message Type is 'Duty Paid'. Please amend your entry and resubmit.	 | 	Postcode	 |
+| 	8720 (New)	 | 		 | 	The Trader Name must be entered where the Submission Message Type is 'Duty Paid'. Please amend your entry and resubmit.	 | 	TraderName	 |
+| 	8721 (New)	 | 		 | 	The Street Name must be entered where the Submission Message Type is 'Duty Paid'. Please amend your entry and resubmit.	 | 	StreetName	 |
+| 	8722 (New)	 | 		 | 	The City must be entered where the Submission Message Type is 'Duty Paid'. Please amend your entry and resubmit.	 | 	City	 |
+| 	8723 (New)	 | 		 | 	If the Trader ID and Trader Excise Number start with 'XI' and the movement is duty paid then the destination must be to a Certified Consignee or to a Temporary Certified Consignee. Please amend your entry and resubmit.	 | 	DestinationTypeCode	 |
+| 	8724 (New)	 | 		 | 	The Excise Product Code of S600 can only be used for Duty paid. Please enter a valid Excise Product Category Code.	 | 	ExciseProductCode	 |
+| 	8725 (New)	 | 		 | 	The Excise Product Code is not valid for this submission message type (movement in duty suspension). Please enter a valid Excise Product Category Code.	 | 	ExciseProductCode	 |
+| 	8726 (New)	 | 		 | 	The origin type must be Duty Paid. Please amend your entry and resubmit.	 | 	OriginTypeCode	 |
 
 ## IE818 - Report of receipt
 
 | Error Code | Sub-Code | Message | Rule Name |
 | ---- | ---------- | -------- | ------- |
-| 	8001	 | 		 | 	You cannot submit a partial refusal for an export. Please amend your entry and resubmit.	 | 	AcceptedOrRejectedReportOfReceiptExport	 | 
-| 	8002	 | 		 | 	You cannot submit more than 999 body items. Please amend your entry and resubmit.	 | 	AcceptedOrRejectedReportOfReceiptExport	 | 
-| 	8003	 | 		 | 	You must enter the quantity being refused. Please amend your entry and resubmit.	 | 	AcceptedOrRejectedReportOfReceiptExport	 | 
-| 	8004	 | 		 | 	You must select partial refusal when declaring the refused quantity. Please amend your entry and resubmit.	 | 	RefusedQuantity	 | 
-| 	8005	 | 		 | 	The submission must contain a unique body record reference number. Please amend your entry and resubmit.	 | 	BodyRecordUniqueReference	 | 
-| 	8006	 | 		 | 	The date and time of validation of the Report of Receipt must not be present. Please contact your software supplier for further advice.	 | 	DateAndTimeOfValidationOfReportOfReceiptExport	 | 
-| 	8007	 | 		 | 	The destination office must be valid and start with 'GB' or 'XI' followed by six numbers. Please amend your entry and resubmit.	 | 	DestinationOffice	 | 
-| 	8011	 | 		 | 	Your indicator and observed shortage (or excess) must both be present or both be absent. Please amend your entry and resubmit.	 | 	BodyReportOfReceiptExport	 | 
-| 	8080	 | 		 | 	The date of arrival must be on or before today's date. Please amend your entry and resubmit.	 | 	DateOfArrivalOfExciseProducts	 | 
-| 	8098	 | 		 | 	The language code for the place of delivery on the Report of Receipt must be provided. Please contact your software supplier for further advice.	 | 	DeliveryPlaceTrader	 | 
-| 	8099	 | 		 | 	The Report of Receipt can only be:<br></br><br></br>- Receipt accepted and satisfactory<br></br>- Receipt accepted although unsatisfactory<br></br>- Receipt refused<br></br>- Receipt partially refused<br></br><br></br>Please amend your entry and resubmit.	 | 	GlobalConclusionOfReceipt	 | 
-| 	8100	 | 		 | 	If 'Other' has been selected for the unsatisfactory reason code you must provide the complementary information. Please amend your entry and resubmit.	 | 	UnsatisfactoryReason	 | 
-| 	8154	 | 		 | 	You must provide at least one unsatisfactory reason unless the global conclusion of receipt is accepted and satisfactory.	 | 	BodyReportOfReceiptExport	 | 
-| 	8705	 | 		 | 	If the consignee place of delivery trader ID starts with GB then the destination office ID must start with GB. Please amend your entry and resubmit	 | 	DestinationOffice	 | 
-| 	8706	 | 		 | 	If the consignee place of delivery trader ID starts with XI then the destination office ID must start with XI. Please amend your entry and resubmit	 | 	DestinationOffice	 | 
+| 	8001	 | 		 | 	You cannot submit a partial refusal for an export. Please amend your entry and resubmit.	 | 	AcceptedOrRejectedReportOfReceiptExport	 |
+| 	8002	 | 		 | 	You cannot submit more than 999 body items. Please amend your entry and resubmit.	 | 	AcceptedOrRejectedReportOfReceiptExport	 |
+| 	8003	 | 		 | 	You must enter the quantity being refused. Please amend your entry and resubmit.	 | 	AcceptedOrRejectedReportOfReceiptExport	 |
+| 	8004	 | 		 | 	You must select partial refusal when declaring the refused quantity. Please amend your entry and resubmit.	 | 	RefusedQuantity	 |
+| 	8005	 | 		 | 	The submission must contain a unique body record reference number. Please amend your entry and resubmit.	 | 	BodyRecordUniqueReference	 |
+| 	8006	 | 		 | 	The date and time of validation of the Report of Receipt must not be present. Please contact your software supplier for further advice.	 | 	DateAndTimeOfValidationOfReportOfReceiptExport	 |
+| 	8007	 | 		 | 	The destination office must be valid and start with 'GB' or 'XI' followed by six numbers. Please amend your entry and resubmit.	 | 	DestinationOffice	 |
+| 	8011	 | 		 | 	Your indicator and observed shortage (or excess) must both be present or both be absent. Please amend your entry and resubmit.	 | 	BodyReportOfReceiptExport	 |
+| 	8080	 | 		 | 	The date of arrival must be on or before today's date. Please amend your entry and resubmit.	 | 	DateOfArrivalOfExciseProducts	 |
+| 	8098	 | 		 | 	The language code for the place of delivery on the Report of Receipt must be provided. Please contact your software supplier for further advice.	 | 	DeliveryPlaceTrader	 |
+| 	8099	 | 		 | 	The Report of Receipt can only be:<br></br><br></br>- Receipt accepted and satisfactory<br></br>- Receipt accepted although unsatisfactory<br></br>- Receipt refused<br></br>- Receipt partially refused<br></br><br></br>Please amend your entry and resubmit.	 | 	GlobalConclusionOfReceipt	 |
+| 	8100	 | 		 | 	If 'Other' has been selected for the unsatisfactory reason code you must provide the complementary information. Please amend your entry and resubmit.	 | 	UnsatisfactoryReason	 |
+| 	8154	 | 		 | 	You must provide at least one unsatisfactory reason unless the global conclusion of receipt is accepted and satisfactory.	 | 	BodyReportOfReceiptExport	 |
+| 	8705	 | 		 | 	If the consignee place of delivery trader ID starts with GB then the destination office ID must start with GB. Please amend your entry and resubmit	 | 	DestinationOffice	 |
+| 	8706	 | 		 | 	If the consignee place of delivery trader ID starts with XI then the destination office ID must start with XI. Please amend your entry and resubmit	 | 	DestinationOffice	 |
 
 ## IE819 - Alert or rejection of E-AD/E-SAD
 
 | Error Code | Sub-Code | Message | Rule Name |
 | ---- | ---------- | -------- | ------- |
-| 	8129	 | 		 | 	The alert or rejection reason must be present if the rejected flag is 'yes' or 'true'. Please amend your entry and resubmit.	 | 	AlertOrRejectionOfEADESAD	 | 
-| 	8156	 | 		 | 	Complementary information must be present if the alert or rejection reason code is other.	 | 	AlertOrRejectionOfEadEsadReason	 | 
-| 	8507	 | 		 | 	The Consignee Trader must be present. Please amend your entry and resubmit	 | 	AlertOrRejectionOfEADESAD	 | 
-| 	8707	 | 		 | 	If the postcode does not start with "BT", then the destination office must start with "GB". Please amend your entry and resubmit	 | 	DestinationOffice	 | 
-| 	8708	 | 		 | 	The destination office must start with 'GB' or 'XI'. Please amend your entry and resubmit	 | 	DestinationOffice	 | 
+| 	8129	 | 		 | 	The alert or rejection reason must be present if the rejected flag is 'yes' or 'true'. Please amend your entry and resubmit.	 | 	AlertOrRejectionOfEADESAD	 |
+| 	8156	 | 		 | 	Complementary information must be present if the alert or rejection reason code is other.	 | 	AlertOrRejectionOfEadEsadReason	 |
+| 	8507	 | 		 | 	The Consignee Trader must be present. Please amend your entry and resubmit	 | 	AlertOrRejectionOfEADESAD	 |
+| 	8707	 | 		 | 	If the postcode does not start with "BT", then the destination office must start with "GB". Please amend your entry and resubmit	 | 	DestinationOffice	 |
+| 	8708	 | 		 | 	The destination office must start with 'GB' or 'XI'. Please amend your entry and resubmit	 | 	DestinationOffice	 |
 
 
 ## IE837 - Explain delay to delivery
@@ -272,17 +272,17 @@ Error codes are available for the following messages:
 
 | Error Code | Sub-Code | Message | Rule Name |
 | ---- | ---------- | -------- | ------- |
-| 	8002	 | 		 | 	You cannot submit more than 999 body items. Please amend your entry and resubmit.	 | 	ExplanationOnReasonForShortage	 | 
-| 	8005	 | 		 | 	The submission must contain a unique body record reference number. Please amend your entry and resubmit.	 | 	BodyRecordUniqueReference	 | 
-| 	8021	 | 		 | 	The date and time that has been submitted is not allowed. Please amend your entry and resubmit.	 | 	DateAndTimeOfValidationOfExplanationOnShortage	 | 
-| 	8141	 | 		 | 	The consignor information must be present. Please amend your entry and resubmit.	 | 	ExplanationOnReasonForShortage	 | 
-| 	8142	 | 		 | 	The consignee information must not be present. Please amend your entry and resubmit.	 | 	ConsigneeTrader	 | 
-| 	8143	 | 		 | 	The consignor information must not be present. Please amend your entry and resubmit.	 | 	ConsignorTrader	 | 
-| 	8145	 | 		 | 	The consignee information must be present. Please amend your entry and resubmit.	 | 	ExplanationOnReasonForShortage	 | 
-| 	8160	 | 		 | 	The (Body)Analysis must be present if an explanation on reason for shortage is present. Please amend your entry and resubmit.	 | 	ExplanationOnReasonForShortage	 | 
-| 	8557	 | 		 | 	The consignee Trader ID must start with GBWK, XIWK or XIPB. Please amend your entry and resubmit.	 | 	Traderid	 | 
-| 	8558	 | 		 | 	The consignor Trader Excise Number must start with GBWK, GBRC, XIWK, XIRC or XIPA. Please amend your entry and resubmit.	 | 	TraderExciseNumber	 | 
-| 	8612	 | 		 | 	If the consignee Trader ID starts with XI then the postcode must start with "BT" (case insensitive)	 | 	Postcode	 | 
-| 	8613	 | 		 | 	If the consignee Trader ID starts with GB then the postcode must not start with "BT" (case insensitive)	 | 	Postcode	 | 
-| 	8614	 | 		 | 	If the consignor excise ID starts with XI then the postcode must start with "BT" (case insensitive)	 | 	Postcode	 | 
-| 	8615	 | 		 | 	If the consignor excise ID starts with GB then the postcode must not start with "BT" (case insensitive)	 | 	Postcode	 | 
+| 	8002	 | 		 | 	You cannot submit more than 999 body items. Please amend your entry and resubmit.	 | 	ExplanationOnReasonForShortage	 |
+| 	8005	 | 		 | 	The submission must contain a unique body record reference number. Please amend your entry and resubmit.	 | 	BodyRecordUniqueReference	 |
+| 	8021	 | 		 | 	The date and time that has been submitted is not allowed. Please amend your entry and resubmit.	 | 	DateAndTimeOfValidationOfExplanationOnShortage	 |
+| 	8141	 | 		 | 	The consignor information must be present. Please amend your entry and resubmit.	 | 	ExplanationOnReasonForShortage	 |
+| 	8142	 | 		 | 	The consignee information must not be present. Please amend your entry and resubmit.	 | 	ConsigneeTrader	 |
+| 	8143	 | 		 | 	The consignor information must not be present. Please amend your entry and resubmit.	 | 	ConsignorTrader	 |
+| 	8145	 | 		 | 	The consignee information must be present. Please amend your entry and resubmit.	 | 	ExplanationOnReasonForShortage	 |
+| 	8160	 | 		 | 	The (Body)Analysis must be present if an explanation on reason for shortage is present. Please amend your entry and resubmit.	 | 	ExplanationOnReasonForShortage	 |
+| 	8557	 | 		 | 	The consignee Trader ID must start with GBWK, XIWK or XIPB. Please amend your entry and resubmit.	 | 	Traderid	 |
+| 	8558	 | 		 | 	The consignor Trader Excise Number must start with GBWK, GBRC, XIWK, XIRC or XIPA. Please amend your entry and resubmit.	 | 	TraderExciseNumber	 |
+| 	8612	 | 		 | 	If the consignee Trader ID starts with XI then the postcode must start with "BT" (case insensitive)	 | 	Postcode	 |
+| 	8613	 | 		 | 	If the consignee Trader ID starts with GB then the postcode must not start with "BT" (case insensitive)	 | 	Postcode	 |
+| 	8614	 | 		 | 	If the consignor excise ID starts with XI then the postcode must start with "BT" (case insensitive)	 | 	Postcode	 |
+| 	8615	 | 		 | 	If the consignor excise ID starts with GB then the postcode must not start with "BT" (case insensitive)	 | 	Postcode	 |
