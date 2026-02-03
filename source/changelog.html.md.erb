@@ -1,0 +1,123 @@
+# 30 July 2024
+
+## Add `lastUpdated` in Movement object responses
+
+### Updates
+
+* The movement object response in the get movements endpoint (GET [/customs/excise/movements](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/excise-movement-control-system-api/1.0/oas/page#tag/Movements/operation/getAllMovements)) and the get messages for a movement endpoint (GET [/customs/excise/movements/{movementId}/messages](https://developer.service.hmrc.gov.uk/api-documentation/docs/api/service/excise-movement-control-system-api/1.0/oas/page#tag/Movements/operation/getAllMessages)) has been updated to include the `lastUpdated` field
+
+  > This can be used when polling for updated movements and messages, if you use the latest `lastUpdated` from the get movements response, you can us that as the `updatedSince` in the next call to ensure you only get updated movements since the most recently updated movement.
+
+# 20 June 2024
+
+## Updates based on third party developer's feedback
+
+### Additions
+* A new query filter `traderType` has been added to the Get Movements and Get Messages for a Movement Endpoints
+* A message recipient ERN field has been added to the Message response in the Get Messages for a Movement Endpoint
+
+### Updates
+* Response formats have been tidied up and made consistent
+* XML Examples can now be accessed via the service guide and have been updated to Schema version 3.13
+
+### Removals
+* The movement `status` field has been removed from responses
+* Forbidden (403) error responses have been removed from the Get Movements and Pre-validate Trader Endpoints
+
+### What impact does this have?
+New features have been added based on feedback we received from third party developers.
+
+The documentation has been made consistent and correctly reflects what has been implemented.
+
+# 19 March 2024
+
+## New endpoints and responses updated
+
+### Additions
+* Push notifications
+* A new endpoint to get a specific message XML body for a movement
+
+### What impact does this have?
+You can now receive push notifications when a message is received for a movement via the PPNS API
+
+There is now an endpoint to get the XML body of a specific message for a movement
+
+# 7 March 2024
+
+## New endpoints and responses updated
+
+### Additions
+* An error codes page has been provided.
+* A page for the 'Get single excise movement' endpoint has been added.
+
+### Updates
+* The 'Get all messages' page has been updated to reflect the use of movement ID. 
+* Additional error statuses have been added to the 'Submit new draft movement', 'Get excise movements', 'Submit a message for an excise movement' and 'Get trader information' pages.
+* The 'Get trader information' page has been updated with a list of valid trader types.
+* New entries added to the Glossary for 'Member state administration' and 'Movement ID'
+* Broken links on the Workflows page have been fixed
+* The process map on the Workflows page has been updated
+
+### What impact does this have?
+The service guide now has up to date information for all endpoints in the EMCS API
+
+# 24 November 2023
+
+## Broken links
+
+### Updates
+
+Broken links have been fixed
+
+ - Links to the Technical Interface Specification on the index page
+ - Links to the relevant parts of the API specification on get-trader-information, get-all-messages, get-excise-movements
+
+# 17 November 2023
+
+## Workflow page added
+
+### Additions
+
+A workflow page has been added that describes the typical workflow when using the API.
+
+### Updates
+
+The high-level process flow diagram has been moved from the index page to the workflow page.
+
+### What impact does this have?
+
+The workflow should make it clearer how the API functions and how to use it.
+
+# 09 November 2023
+
+## Parameters and responses updated
+
+### Updates
+
+* All endpoint pages have updated parameters and responses to reflect the latest version of the API specification.
+* The Endpoint delivery page has been updated to reflect that IE810 and IE837 messages are now available for testing. 
+
+### What impact does this have?
+
+* You can use the endpoint pages to find out accurate information about the latest API spec.
+
+# 30 September 2023
+
+## Service guide created
+
+The service guide is a high-level overview and reference guide for the new RESTful EMCS API.
+
+### Additions
+
+* A migration page with guidance for users who have previously used the old SOAP EMCS API.
+* Pages describing each endpoint.
+* Links to the API specification, testing guide, technical interface specification and changelogs.
+* An 'Endpoint delivery status' page with information on expected and actual delivery dates for testing each endpoint.
+* A brief glossary
+* Information on getting started using the EMCS API for the first time
+* Information on using the Developer Hub
+* A high level process flow diagram
+
+### What impact does this have?
+
+The service guide now provides a high-level overview of the API and relevant documentation, to support you in enabling your software to connect to the API.
